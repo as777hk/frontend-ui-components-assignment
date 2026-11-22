@@ -37,3 +37,8 @@
 .newsletter-form input{padding:12px 10px}.newsletter-form button{border-radius:3px;background:#f4d66d;color:#28365f}
 .newsletter-form button:hover{background:#ffe89a}.newsletter-message{color:#f4d66d}.privacy-note{color:#c5cde4}
 @media(max-width:520px){.product-image-wrap{height:225px}.newsletter-card h2{font-size:33px}.brand-lockup{margin-bottom:18px}}
+
+/* Remove decorative AI-like sparkles; use restrained editorial markers instead */
+.mini-spark{display:none!important}.newsletter-decoration{display:none!important}
+.card-index{display:inline-grid;width:24px;height:24px;place-items:center;border:1px solid currentColor;border-radius:50%;font:700 9px 'DM Sans',sans-serif;letter-spacing:0}
+.registration-card .card-index{color:#d5fa58}.contact-info .card-index{color:#f6d77c}.newsletter-icon{font-size:0}
