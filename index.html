@@ -13,28 +13,28 @@
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-  <main class="cards-grid">
+  <main class="cards-grid mx-auto grid grid-cols-1 gap-6 md:grid-cols-2">
     <!-- Task 1: User Registration Card -->
-    <section class="ui-card registration-card" aria-labelledby="registration-title">
+    <section class="ui-card registration-card rounded-2xl border bg-white p-6 shadow-sm md:p-8" aria-labelledby="registration-title">
       <div class="card-heading">
         <div class="heading-icon purple-icon">✦</div>
         <div><h1 id="registration-title">Create Account</h1><p>Sign up to get started</p></div>
       </div>
-      <form id="registrationForm" class="form-stack" novalidate>
-        <div class="two-fields">
+      <form id="registrationForm" class="form-stack grid gap-4" novalidate>
+        <div class="two-fields grid grid-cols-2 gap-3">
           <label>First Name<input class="field-input" name="firstName" type="text" placeholder="First name" required minlength="2"></label>
           <label>Last Name<input class="field-input" name="lastName" type="text" placeholder="Last name" required minlength="2"></label>
         </div>
         <label>Email Address<input class="field-input" name="email" type="email" placeholder="name@example.com" required></label>
         <label>Password<input class="field-input" name="password" type="password" placeholder="Enter password" required minlength="8"></label>
         <label>Confirm Password<input class="field-input" name="confirmPassword" type="password" placeholder="Confirm password" required></label>
-        <button class="primary-button" type="submit">Register <span>→</span></button>
+        <button class="primary-button flex w-full items-center justify-center rounded-xl px-5 py-3 font-bold transition" type="submit">Register <span>→</span></button>
         <p id="registrationMessage" class="form-message" role="status" aria-live="polite"></p>
       </form>
     </section>
 
     <!-- Task 2: Product Card -->
-    <section class="ui-card product-card" aria-labelledby="product-title">
+    <section class="ui-card product-card flex flex-col rounded-2xl border bg-white p-3 shadow-sm" aria-labelledby="product-title">
       <div class="product-image-wrap">
         <span class="category-badge">Electronics</span>
         <img class="product-image" src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=1200&q=85" alt="Wireless headphones">
@@ -50,7 +50,7 @@
     </section>
 
     <!-- Task 3: Split Contact Us Card -->
-    <section class="ui-card contact-card" aria-labelledby="contact-title">
+    <section class="ui-card contact-card grid grid-cols-1 overflow-hidden rounded-2xl border bg-white shadow-sm md:grid-cols-[0.9fr_1.1fr]" aria-labelledby="contact-title">
       <div class="contact-info">
         <div class="heading-icon light-icon">✉</div>
         <h2 id="contact-title">Contact Information</h2>
@@ -62,7 +62,7 @@
           <div class="contact-item"><span class="contact-symbol">◷</span><div><small>Office Hours</small><p>Mon – Fri, 9:00 AM – 6:00 PM</p></div></div>
         </div>
       </div>
-      <form id="contactForm" class="contact-form" novalidate>
+      <form id="contactForm" class="contact-form grid content-start gap-4" novalidate>
         <h3>Send Us a Message</h3>
         <label>Name<input class="field-input" name="name" type="text" placeholder="Your name" required></label>
         <label>Email<input class="field-input" name="email" type="email" placeholder="name@example.com" required></label>
@@ -74,13 +74,13 @@
     </section>
 
     <!-- Task 4: Newsletter Subscription Card -->
-    <section class="ui-card newsletter-card" aria-labelledby="newsletter-title">
+    <section class="ui-card newsletter-card flex flex-col justify-center rounded-2xl border p-8 shadow-sm md:p-10" aria-labelledby="newsletter-title">
       <div class="newsletter-decoration" aria-hidden="true">✳</div>
       <div class="newsletter-icon">✉</div>
       <p class="newsletter-kicker">THE WEEKLY EDIT</p>
       <h2 id="newsletter-title">Stay in the loop.</h2>
       <p class="newsletter-description">Get the latest updates, helpful tips, and fresh inspiration delivered straight to your inbox.</p>
-      <form id="newsletterForm" class="newsletter-form">
+      <form id="newsletterForm" class="newsletter-form flex items-center gap-2 rounded-xl border bg-white p-1.5">
         <label class="sr-only" for="newsletterEmail">Email address</label>
         <input id="newsletterEmail" type="email" placeholder="Enter your email address" required>
         <button type="submit" aria-label="Subscribe">Subscribe <span>→</span></button>
