@@ -1,5 +1,3 @@
-document.getElementById('year').textContent = new Date().getFullYear();
-
 function showMessage(element, message, type) {
   element.textContent = message;
   element.className = 'form-message ' + type;
@@ -24,15 +22,15 @@ document.getElementById('registrationForm').addEventListener('submit', (event) =
   const password = form.elements.password;
   const confirmPassword = form.elements.confirmPassword;
   if (!validateForm(form)) {
-    showMessage(message, 'Please complete all required fields with valid information.', 'error');
+    showMessage(message, 'Please complete all required fields correctly.', 'error');
     return;
   }
   if (password.value !== confirmPassword.value) {
     confirmPassword.classList.add('invalid');
-    showMessage(message, 'Your passwords do not match. Please try again.', 'error');
+    showMessage(message, 'Passwords do not match. Please try again.', 'error');
     return;
   }
-  showMessage(message, 'Your details look good! Registration UI demo completed successfully.', 'success');
+  showMessage(message, 'Registration form completed successfully (demo).', 'success');
   form.reset();
 });
 
@@ -41,10 +39,10 @@ document.getElementById('contactForm').addEventListener('submit', (event) => {
   const form = event.currentTarget;
   const message = document.getElementById('contactMessage');
   if (!validateForm(form)) {
-    showMessage(message, 'Please check the highlighted fields and try again.', 'error');
+    showMessage(message, 'Please complete all fields correctly.', 'error');
     return;
   }
-  showMessage(message, 'Thanks for reaching out! Your message is ready (demo form).', 'success');
+  showMessage(message, 'Thank you! Your message is ready (demo form).', 'success');
   form.reset();
 });
 
@@ -57,21 +55,13 @@ document.getElementById('newsletterForm').addEventListener('submit', (event) => 
     message.textContent = 'Please enter a valid email address.';
     return;
   }
-  message.textContent = 'You are on the list — thanks for subscribing!';
+  message.textContent = 'Thanks for subscribing! (Demo)';
   email.value = '';
 });
 
 document.getElementById('addToCart').addEventListener('click', () => {
-  const message = document.getElementById('cartMessage');
-  message.textContent = 'Added to your cart · 1 item';
-  document.getElementById('addToCart').innerHTML = 'Added to cart <span>✓</span>';
-});
-
-document.getElementById('wishlist').addEventListener('click', (event) => {
-  const button = event.currentTarget;
-  button.classList.toggle('selected');
-  button.textContent = button.classList.contains('selected') ? '♥' : '♡';
-  button.setAttribute('aria-label', button.classList.contains('selected') ? 'Remove from wishlist' : 'Add to wishlist');
+  document.getElementById('cartMessage').textContent = 'Added to cart successfully (demo).';
+  document.getElementById('addToCart').innerHTML = 'Added to Cart <span>✓</span>';
 });
 
 document.querySelectorAll('.field-input').forEach((field) => {
