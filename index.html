@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#f7f8fc">
-  <meta name="description" content="A collection of four responsive UI components built with HTML, Tailwind CSS and JavaScript.">
+  <meta name="description" content="Four assignment components: User Registration, Product Card, Split Contact Us and Newsletter Subscription.">
   <title>Forma — UI Components Showcase</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -72,10 +72,10 @@
           <label class="field-label">Password<input class="field-input" name="password" type="password" placeholder="At least 8 characters" required minlength="8"></label>
           <label class="field-label">Confirm password<input class="field-input" name="confirmPassword" type="password" placeholder="Repeat password" required></label>
         </div>
-        <label class="flex items-start gap-3 text-xs leading-5 text-slate-500"><input type="checkbox" id="terms" class="mt-1 accent-violet" required><span>I agree to the <a href="#register" class="font-bold text-violet">Terms of Service</a> and <a href="#register" class="font-bold text-violet">Privacy Policy</a>.</span></label>
+        
         <button class="primary-button w-full" type="submit">Create account <span>→</span></button>
         <p id="registrationMessage" class="form-message" role="status" aria-live="polite"></p>
-        <p class="text-center text-xs text-slate-500">Already have an account? <a href="#register" class="font-bold text-violet">Sign in</a></p>
+        
       </form>
     </section>
 
@@ -83,7 +83,7 @@
       <div><p class="eyebrow">02 / FEATURED ITEM</p><h2 class="section-title">Product spotlight</h2><p class="section-copy">A product card that balances product details with a clear purchase action.</p></div><span class="section-count">02</span>
     </section>
     <section class="mt-7 grid gap-6 rounded-3xl bg-white p-6 shadow-soft sm:p-9 md:grid-cols-2">
-      <div class="product-art relative overflow-hidden rounded-2xl"><span class="absolute left-5 top-5 z-10 rounded-full bg-white/90 px-3 py-1.5 text-[10px] font-extrabold uppercase tracking-widest text-violet">Editor's pick</span><div class="product-glow"></div><div class="headphone" aria-label="Illustration of premium wireless headphones"><div class="headband"></div><div class="earcup left"></div><div class="earcup right"></div></div><span class="absolute bottom-5 left-5 text-xs font-semibold tracking-[.2em] text-slate-500">AUDIO / SERIES 01</span></div>
+      <div class="product-art relative overflow-hidden rounded-2xl"><span class="absolute left-5 top-5 z-10 rounded-full bg-white/95 px-3 py-1.5 text-[10px] font-extrabold uppercase tracking-widest text-violet">Electronics</span><img class="product-photo" src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=1100&q=85" alt="Wireless over-ear headphones product photo" loading="lazy"><span class="absolute bottom-5 left-5 z-10 rounded-full bg-white/90 px-3 py-1.5 text-xs font-semibold tracking-wide text-slate-600">Product image</span></div>
       <div class="flex flex-col justify-center px-1 py-4 sm:px-6">
         <div class="text-xs font-bold uppercase tracking-[.2em] text-violet">Studio collection</div><h3 class="mt-3 text-3xl font-extrabold tracking-tight">Sonic Pro Wireless</h3><p class="mt-3 max-w-sm text-sm leading-6 text-muted">Immersive sound, all-day comfort and a beautifully minimal silhouette. Made for focus, wherever you go.</p>
         <div class="mt-5 flex items-center gap-2 text-sm"><span class="text-amber-400">★★★★★</span><span class="font-bold">4.9</span><span class="text-slate-400">(128 reviews)</span></div>
@@ -99,9 +99,9 @@
     <section class="mt-7 grid overflow-hidden rounded-3xl bg-white shadow-soft lg:grid-cols-[.85fr_1.15fr]">
       <div class="contact-side p-7 text-white sm:p-10"><p class="text-xs font-bold uppercase tracking-[.22em] text-violet-200">Contact information</p><h3 class="mt-5 text-3xl font-extrabold tracking-tight">We'd love to hear from you.</h3><p class="mt-3 max-w-xs text-sm leading-6 text-slate-300">Have a question, an idea, or a project in mind? Reach out and let's start a conversation.</p>
         <div class="mt-10 space-y-6">
-          <div class="contact-detail"><span class="contact-symbol">⌖</span><div><p class="detail-caption">Our studio</p><p>123 Creative Avenue, New York, NY 10001</p></div></div>
-          <div class="contact-detail"><span class="contact-symbol">↗</span><div><p class="detail-caption">Phone</p><p>+1 (212) 555-0184</p></div></div>
-          <div class="contact-detail"><span class="contact-symbol">✉</span><div><p class="detail-caption">Email</p><p>hello@forma.studio</p></div></div>
+          <div class="contact-detail"><span class="contact-symbol">⌖</span><div><p class="detail-caption">Our studio</p><p>123 Example Street, New York, NY 10001</p></div></div>
+          <div class="contact-detail"><span class="contact-symbol">↗</span><div><p class="detail-caption">Phone</p><p>+1 (555) 010-0184</p></div></div>
+          <div class="contact-detail"><span class="contact-symbol">✉</span><div><p class="detail-caption">Email</p><p>hello@example.com</p></div></div>
           <div class="contact-detail"><span class="contact-symbol">◷</span><div><p class="detail-caption">Office hours</p><p>Mon – Fri, 9:00 AM – 6:00 PM</p></div></div>
         </div>
         <div class="mt-12 border-t border-white/15 pt-6 text-xs text-slate-400">Good things begin with a conversation.</div>
