@@ -32,10 +32,6 @@ document.getElementById('registrationForm').addEventListener('submit', (event) =
     showMessage(message, 'Your passwords do not match. Please try again.', 'error');
     return;
   }
-  if (!document.getElementById('terms').checked) {
-    showMessage(message, 'Please accept the terms to continue.', 'error');
-    return;
-  }
   showMessage(message, 'Your details look good! Registration UI demo completed successfully.', 'success');
   form.reset();
 });
