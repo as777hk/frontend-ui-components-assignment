@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7f8fc">
+  <meta name="description" content="A collection of four responsive UI components built with HTML, Tailwind CSS and JavaScript.">
+  <title>Forma — UI Components Showcase</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'] },
+        colors: { ink: '#171923', muted: '#727789', violet: '#6958e8', canvas: '#f7f8fc' },
+        boxShadow: { soft: '0 18px 55px rgba(31, 35, 64, .08)' }
+      }}
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body class="bg-canvas text-ink antialiased">
+  <header class="mx-auto flex max-w-7xl items-center justify-between px-5 py-6 sm:px-8">
+    <a href="#" class="flex items-center gap-3" aria-label="Forma home">
+      <span class="brand-mark">f.</span>
+      <span class="font-extrabold tracking-tight text-xl">forma<span class="text-violet">.</span></span>
+    </a>
+    <nav class="hidden items-center gap-8 text-sm font-semibold text-slate-500 md:flex" aria-label="Main navigation">
+      <a class="nav-link active" href="#register">Components</a>
+      <a class="nav-link" href="#contact">Contact</a>
+      <a class="nav-link" href="#newsletter">Newsletter</a>
+    </nav>
+    <a href="#register" class="rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-violet">Explore UI <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main class="mx-auto max-w-7xl px-5 pb-20 sm:px-8">
+    <section class="hero-grid relative overflow-hidden rounded-[2rem] bg-[#171923] px-7 py-12 text-white shadow-soft sm:px-12 sm:py-16 lg:px-16">
+      <div class="hero-orb orb-one"></div><div class="hero-orb orb-two"></div>
+      <div class="relative z-10 max-w-2xl">
+        <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[.07] px-3.5 py-2 text-xs font-semibold tracking-wide text-violet-200"><span class="h-2 w-2 rounded-full bg-emerald-400"></span> FRONTEND COMPONENTS / 2026</div>
+        <h1 class="max-w-xl text-4xl font-extrabold leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl">Thoughtful UI.<br><span class="gradient-text">Better experiences.</span></h1>
+        <p class="mt-6 max-w-lg text-base leading-7 text-slate-300 sm:text-lg">A curated set of everyday interface components, designed to feel clear, useful and effortless on every screen.</p>
+        <a href="#register" class="mt-8 inline-flex items-center gap-3 rounded-full bg-white px-6 py-3.5 text-sm font-bold text-ink transition hover:scale-[1.03]">Explore the collection <span class="text-violet">↓</span></a>
+      </div>
+      <div class="hero-decoration relative z-10 mt-12 hidden lg:block" aria-hidden="true">
+        <div class="floating-card card-a"><span class="mini-dot"></span><span class="mini-line w-24"></span><span class="mini-line w-16"></span></div>
+        <div class="floating-card card-b"><span class="mini-avatar"></span><div><span class="mini-line w-20"></span><span class="mini-line w-12"></span></div><span class="mini-check">✓</span></div>
+        <div class="floating-card card-c"><span class="mini-pill"></span><span class="mini-line w-28"></span><span class="mini-line w-20"></span></div>
+      </div>
+      <div class="hero-index absolute bottom-7 right-8 hidden text-right sm:block"><div class="text-xs font-semibold tracking-[.25em] text-white/40">DESIGN SYSTEM</div><div class="mt-1 text-2xl font-bold">01 <span class="text-white/30">— 04</span></div></div>
+    </section>
+
+    <section class="section-heading mt-20" id="register">
+      <div><p class="eyebrow">01 / GET STARTED</p><h2 class="section-title">Create your account</h2><p class="section-copy">A welcoming registration flow with clear fields and helpful feedback.</p></div>
+      <span class="section-count">01</span>
+    </section>
+    <section class="component-panel mt-7 grid gap-8 rounded-3xl bg-white p-6 shadow-soft sm:p-9 lg:grid-cols-[.8fr_1.2fr] lg:gap-14">
+      <div class="flex flex-col justify-between rounded-2xl bg-[#f2f0ff] p-7 sm:p-9">
+        <div><div class="icon-tile">✦</div><h3 class="mt-7 text-2xl font-extrabold tracking-tight">Your next chapter starts here.</h3><p class="mt-3 text-sm leading-6 text-slate-600">Join a community built around good ideas, meaningful work and room to grow.</p></div>
+        <div class="mt-10"><div class="flex -space-x-2"><span class="avatar-chip bg-[#d8c7ff]">A</span><span class="avatar-chip bg-[#ffd9c8]">M</span><span class="avatar-chip bg-[#c9e8dc]">J</span><span class="avatar-chip bg-[#25263a] text-white">+2k</span></div><p class="mt-3 text-xs font-semibold text-slate-500">A growing community of makers</p></div>
+      </div>
+      <form id="registrationForm" class="space-y-5" novalidate>
+        <div><h3 class="text-xl font-extrabold tracking-tight">Create an account</h3><p class="mt-1 text-sm text-muted">Enter your details to get started.</p></div>
+        <div class="grid gap-4 sm:grid-cols-2">
+          <label class="field-label">First name<input class="field-input" name="firstName" placeholder="Alex" required minlength="2"></label>
+          <label class="field-label">Last name<input class="field-input" name="lastName" placeholder="Morgan" required minlength="2"></label>
+        </div>
+        <label class="field-label">Email address<input class="field-input" name="email" type="email" placeholder="you@example.com" required></label>
+        <div class="grid gap-4 sm:grid-cols-2">
+          <label class="field-label">Password<input class="field-input" name="password" type="password" placeholder="At least 8 characters" required minlength="8"></label>
+          <label class="field-label">Confirm password<input class="field-input" name="confirmPassword" type="password" placeholder="Repeat password" required></label>
+        </div>
+        <label class="flex items-start gap-3 text-xs leading-5 text-slate-500"><input type="checkbox" id="terms" class="mt-1 accent-violet" required><span>I agree to the <a href="#register" class="font-bold text-violet">Terms of Service</a> and <a href="#register" class="font-bold text-violet">Privacy Policy</a>.</span></label>
+        <button class="primary-button w-full" type="submit">Create account <span>→</span></button>
+        <p id="registrationMessage" class="form-message" role="status" aria-live="polite"></p>
+        <p class="text-center text-xs text-slate-500">Already have an account? <a href="#register" class="font-bold text-violet">Sign in</a></p>
+      </form>
+    </section>
+
+    <section class="section-heading mt-20" id="product">
+      <div><p class="eyebrow">02 / FEATURED ITEM</p><h2 class="section-title">Product spotlight</h2><p class="section-copy">A product card that balances product details with a clear purchase action.</p></div><span class="section-count">02</span>
+    </section>
+    <section class="mt-7 grid gap-6 rounded-3xl bg-white p-6 shadow-soft sm:p-9 md:grid-cols-2">
+      <div class="product-art relative overflow-hidden rounded-2xl"><span class="absolute left-5 top-5 z-10 rounded-full bg-white/90 px-3 py-1.5 text-[10px] font-extrabold uppercase tracking-widest text-violet">Editor's pick</span><div class="product-glow"></div><div class="headphone" aria-label="Illustration of premium wireless headphones"><div class="headband"></div><div class="earcup left"></div><div class="earcup right"></div></div><span class="absolute bottom-5 left-5 text-xs font-semibold tracking-[.2em] text-slate-500">AUDIO / SERIES 01</span></div>
+      <div class="flex flex-col justify-center px-1 py-4 sm:px-6">
+        <div class="text-xs font-bold uppercase tracking-[.2em] text-violet">Studio collection</div><h3 class="mt-3 text-3xl font-extrabold tracking-tight">Sonic Pro Wireless</h3><p class="mt-3 max-w-sm text-sm leading-6 text-muted">Immersive sound, all-day comfort and a beautifully minimal silhouette. Made for focus, wherever you go.</p>
+        <div class="mt-5 flex items-center gap-2 text-sm"><span class="text-amber-400">★★★★★</span><span class="font-bold">4.9</span><span class="text-slate-400">(128 reviews)</span></div>
+        <div class="mt-6 flex items-end gap-3"><span class="text-3xl font-extrabold">$149.00</span><span class="pb-1 text-sm text-slate-400 line-through">$189.00</span><span class="mb-1 rounded-md bg-emerald-50 px-2 py-1 text-[10px] font-extrabold text-emerald-700">21% OFF</span></div>
+        <div class="mt-7 flex flex-wrap gap-3"><button id="addToCart" class="primary-button flex-1">Add to cart <span>↗</span></button><button class="icon-button" aria-label="Add to wishlist" id="wishlist">♡</button></div>
+        <p id="cartMessage" class="mt-3 text-xs font-semibold text-emerald-700" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section class="section-heading mt-20" id="contact">
+      <div><p class="eyebrow">03 / SAY HELLO</p><h2 class="section-title">Let's make it happen.</h2><p class="section-copy">A split contact layout with useful details and a straightforward message form.</p></div><span class="section-count">03</span>
+    </section>
+    <section class="mt-7 grid overflow-hidden rounded-3xl bg-white shadow-soft lg:grid-cols-[.85fr_1.15fr]">
+      <div class="contact-side p-7 text-white sm:p-10"><p class="text-xs font-bold uppercase tracking-[.22em] text-violet-200">Contact information</p><h3 class="mt-5 text-3xl font-extrabold tracking-tight">We'd love to hear from you.</h3><p class="mt-3 max-w-xs text-sm leading-6 text-slate-300">Have a question, an idea, or a project in mind? Reach out and let's start a conversation.</p>
+        <div class="mt-10 space-y-6">
+          <div class="contact-detail"><span class="contact-symbol">⌖</span><div><p class="detail-caption">Our studio</p><p>123 Creative Avenue, New York, NY 10001</p></div></div>
+          <div class="contact-detail"><span class="contact-symbol">↗</span><div><p class="detail-caption">Phone</p><p>+1 (212) 555-0184</p></div></div>
+          <div class="contact-detail"><span class="contact-symbol">✉</span><div><p class="detail-caption">Email</p><p>hello@forma.studio</p></div></div>
+          <div class="contact-detail"><span class="contact-symbol">◷</span><div><p class="detail-caption">Office hours</p><p>Mon – Fri, 9:00 AM – 6:00 PM</p></div></div>
+        </div>
+        <div class="mt-12 border-t border-white/15 pt-6 text-xs text-slate-400">Good things begin with a conversation.</div>
+      </div>
+      <form id="contactForm" class="space-y-5 p-7 sm:p-10" novalidate>
+        <div><h3 class="text-xl font-extrabold">Send us a message</h3><p class="mt-1 text-sm text-muted">We usually respond within one business day.</p></div>
+        <div class="grid gap-4 sm:grid-cols-2"><label class="field-label">Your name<input class="field-input" name="name" placeholder="Full name" required></label><label class="field-label">Email address<input class="field-input" name="email" type="email" placeholder="you@example.com" required></label></div>
+        <label class="field-label">Subject<input class="field-input" name="subject" placeholder="How can we help?" required></label>
+        <label class="field-label">Message<textarea class="field-input min-h-32 resize-y" name="message" placeholder="Tell us a little about it..." required minlength="10"></textarea></label>
+        <button class="primary-button" type="submit">Send message <span>→</span></button><p id="contactMessage" class="form-message" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section class="section-heading mt-20" id="newsletter">
+      <div><p class="eyebrow">04 / STAY IN THE LOOP</p><h2 class="section-title">A little inspiration, delivered.</h2><p class="section-copy">A focused newsletter banner with a simple subscription interaction.</p></div><span class="section-count">04</span>
+    </section>
+    <section class="newsletter-panel relative mt-7 overflow-hidden rounded-3xl px-7 py-10 text-white shadow-soft sm:px-12 sm:py-14">
+      <div class="newsletter-shape"></div><div class="relative z-10 grid items-center gap-8 lg:grid-cols-[1fr_1fr]">
+        <div><div class="mb-4 inline-flex rounded-full border border-white/20 bg-white/10 px-3 py-1.5 text-[10px] font-bold uppercase tracking-[.2em]">The Forma edit</div><h3 class="max-w-md text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl">Fresh ideas. No inbox clutter.</h3><p class="mt-4 max-w-md text-sm leading-6 text-white/70">Get thoughtful reads, useful resources and the occasional note from our studio. Only the good stuff.</p></div>
+        <form id="newsletterForm" class="rounded-2xl border border-white/15 bg-white/10 p-2 backdrop-blur-sm"><label class="sr-only" for="newsletterEmail">Your email address</label><div class="flex flex-col gap-2 sm:flex-row"><input id="newsletterEmail" type="email" required placeholder="Enter your email address" class="min-w-0 flex-1 rounded-xl border border-white/10 bg-white px-4 py-3.5 text-sm text-ink outline-none placeholder:text-slate-400 focus:ring-2 focus:ring-violet-300"><button class="rounded-xl bg-white px-6 py-3.5 text-sm font-extrabold text-ink transition hover:bg-violet-100" type="submit">Subscribe ↗</button></div><p class="px-3 pb-1 pt-3 text-[11px] text-white/60">By subscribing, you agree to receive occasional updates. Unsubscribe anytime.</p><p id="newsletterMessage" class="px-3 text-xs font-semibold text-emerald-200" role="status" aria-live="polite"></p></form>
+      </div>
+    </section>
+  </main>
+  <footer class="border-t border-slate-200/80"><div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-5 py-7 text-xs text-slate-500 sm:flex-row sm:px-8"><a href="#" class="font-extrabold text-ink">forma<span class="text-violet">.</span></a><p>Designed with intention. Built for every screen.</p><p>© <span id="year"></span> Forma UI Showcase</p></div></footer>
+  <script src="./script.js"></script>
+</body>
+</html>
